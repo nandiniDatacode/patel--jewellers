@@ -1,0 +1,203 @@
+
+$gold-color: #D4AF37;
+$diamond-color: #B9F2FF;
+$font-primary: 'Playfair Display', serif;
+$font-secondary: 'Roboto', sans-serif;
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  .navbar-brand {
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    color: $gold-color !important;
+  }
+  .nav-link {
+    color: #fff !important;
+    &:hover { 
+      color: $gold-color !important;
+    }
+  }
+}
+
+.hero-section {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+
+  .hero-title {
+    font-family: $font-primary;
+    font-size: 3rem;
+    font-weight: bold;
+    color: $gold-color;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+
+  .btn-gold {
+    background-color: $gold-color;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    &:hover { 
+      background-color: darken($gold-color, 10%);
+    }
+  }
+}
+
+@mixin feature-card-style {
+  text-align: center;
+  padding: 20px;
+  .feature-icon {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    color: $gold-color;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+.features-section {
+  padding: 80px 0;
+  background-color: #fff;
+
+  .section-title {
+    font-family: $font-primary;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $gold-color;
+    margin-bottom: 50px;
+  }
+
+  .feature-card {
+    @include feature-card-style; 
+  }
+}
+
+%footer-style {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer {
+  @extend %footer-style; 
+}
+
+@mixin button-style($type) {
+  @if $type == 'gold' {
+    background-color: $gold-color;
+    color: #fff;
+  } @else if $type == 'diamond' {
+    background-color: $diamond-color;
+    color: #000;
+  } @else {
+    background-color: #ccc;
+    color: #000;
+  }
+}
+
+.btn-custom {
+  @include button-style('gold'); 
+}
+
+@for $i from 1 through 3 {
+  .feature-card-#{$i} {
+    background-color: lighten($gold-color, $i * 10%);
+  }
+}
+
+$icons: diamond, gold, ring;
+
+@each $icon in $icons {
+  .icon-#{$icon} {
+    background-image: url('assets/images/#{$icon}-icon.png');
+  }
+}
+
+@function calculate-margin($base, $multiplier) {
+  @return $base * $multiplier;
+}
+
+.feature-card {
+  margin-bottom: calculate-margin(10px, 2); 
+}
+
+.parent {
+  color: #000;
+  @at-root .child { 
+    color: #fff;
+  }
+}
+
+$i: 1;
+@while $i <= 3 {
+  .while-example-#{$i} {
+    padding: 10px * $i;
+  }
+  $i: $i + 1;
+}
+
+$base-padding: 10px;
+$base-margin: 20px;
+
+.operators-example {
+  padding: $base-padding + 5px;
+  margin: $base-margin * 2; 
+  border: 1px solid #000;
+}
+
+$width: 100px;
+@if $width > 50px {
+  .relational-example {
+    width: $width;
+  }
+}
+
+$brand-name: 'Patel' + ' ' + 'Jewellers';
+.brand-name::before {
+  content: $brand-name;
+}
+
+
+$theme: 'gold';
+@if $theme == 'gold' {
+  .theme-example {
+    background-color: $gold-color;
+  }
+}
+
+$is-gold-theme: true;
+@if $is-gold-theme and $theme == 'gold' { 
+  .boolean-example {
+    color: $gold-color;
+  }
+}
+
+.style-example {
+  font-family: $font-primary;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.button {
+  @include button-style('gold'); 
+}
+
+.button-extended {
+  @extend %footer-style; 
+}

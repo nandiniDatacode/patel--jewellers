@@ -1,0 +1,158 @@
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+.navbar .navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #D4AF37 !important;
+}
+.navbar .nav-link {
+  color: #fff !important;
+}
+.navbar .nav-link:hover {
+  color: #D4AF37 !important;
+}
+
+.hero-section {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+}
+.hero-section .hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #D4AF37;
+}
+.hero-section .hero-text {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.hero-section .btn-gold {
+  background-color: #D4AF37;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+}
+.hero-section .btn-gold:hover {
+  background-color: #b29126;
+}
+
+.features-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+.features-section .section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #D4AF37;
+  margin-bottom: 50px;
+}
+.features-section .feature-card {
+  text-align: center;
+  padding: 20px;
+}
+.features-section .feature-card .feature-icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+.features-section .feature-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #D4AF37;
+}
+.features-section .feature-card p {
+  font-size: 1rem;
+}
+
+.button-extended, .footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.btn-custom {
+  background-color: #D4AF37;
+  color: #fff;
+}
+
+.feature-card-1 {
+  background-color: #ddc061;
+}
+
+.feature-card-2 {
+  background-color: #e6d18b;
+}
+
+.feature-card-3 {
+  background-color: #efe1b5;
+}
+
+.icon-diamond {
+  background-image: url("assets/images/diamond-icon.png");
+}
+
+.icon-gold {
+  background-image: url("assets/images/gold-icon.png");
+}
+
+.icon-ring {
+  background-image: url("assets/images/ring-icon.png");
+}
+
+.feature-card {
+  margin-bottom: 20px;
+}
+
+.parent {
+  color: #000;
+}
+.child {
+  color: #fff;
+}
+
+.while-example-1 {
+  padding: 10px;
+}
+
+.while-example-2 {
+  padding: 20px;
+}
+
+.while-example-3 {
+  padding: 30px;
+}
+
+.operators-example {
+  padding: 15px;
+  margin: 40px;
+  border: 1px solid #000;
+}
+
+.relational-example {
+  width: 100px;
+}
+
+.brand-name::before {
+  content: "Patel Jewellers";
+}
+
+.theme-example {
+  background-color: #D4AF37;
+}
+
+.boolean-example {
+  color: #D4AF37;
+}
+
+.style-example {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.button {
+  background-color: #D4AF37;
+  color: #fff;
+}/*# sourceMappingURL=styles.css.map */
